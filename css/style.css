@@ -85,7 +85,11 @@ nav a[aria-current="page"] {
   content: "";
   position: absolute;
   inset: 0; /* Täcker hela hero-sektionen */
-  background: url("../images/header.png") center / cover no-repeat;
+  background: url("../images/header.png") center / cover no-repeat; /* Fallback för äldre webbläsare */
+  background-image: image-set(
+    url("../images/header.webp") type("image/webp"),
+    url("../images/header.png") type("image/png")
+  ); /* Väljer WebP när det stöds */
   opacity: 0.6; /* Bilden blir 60 % ogenomskinlig */
   z-index: -1; /* Placerar bilden bakom texten */
 }
