@@ -102,14 +102,22 @@ nav a[aria-current="page"] {
 }
 
 .hero-home h1 {
-  transform: translateY(5px); /* Flyttar rubriken uppåt eller nedåt */
+  position: absolute;
+  top: calc(49% - 15); /* Placerar rubriken vid vattenlinjen */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrerar rubriken */
+  width: calc(100% - 40px);
 }
 
-.hero p {
-  font-size: 1.2rem;
-  font-weight: 600; /* Gör texten lite kraftigare */
-  color: #f1f1ed; /* Ljusare text */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+.hero-home p {
+  position: absolute;
+  top: calc(
+    49% - 15 + clamp(36px, 7vw, 65px)
+  ); /* Underrubriken följer rubriken */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  margin: 0;
 }
 
 /* Sidans innehåll */
