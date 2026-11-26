@@ -102,22 +102,7 @@ nav a[aria-current="page"] {
 }
 
 .hero-home h1 {
-  position: absolute;
-  top: calc(49% - 15); /* Placerar rubriken vid vattenlinjen */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centrerar rubriken */
-  width: calc(100% - 40px);
-}
-
-.hero-home p {
-  position: absolute;
-  top: calc(
-    49% - 15 + clamp(36px, 7vw, 65px)
-  ); /* Underrubriken följer rubriken */
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 40px);
-  margin: 0;
+  transform: translateY(5px); /* Samma placering som i originalversionen */
 }
 
 /* Sidans innehåll */
